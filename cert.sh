@@ -16,7 +16,7 @@ echo ######## copio la catella dei vecchi certificati #########
 echo `cp -r $CERTFOLDER $CERTFOLDER'_'$TODAY`
 
 echo ######## rimuovo i certificati vecchi dalla cartella `$CERTFOLDER` #########
-echo `rm -r $CERTFOLDER'/*'`
+echo `rm -rf $CERTFOLDER/*`
 
 echo ######## Inizio procedura di creazione certificati ########
 for d in `mysql -u$USER -p$PASSWORD -h $HOST -D $DATABASE -e "select domain from wp_domain_mapping"`
